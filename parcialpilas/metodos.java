@@ -17,16 +17,13 @@ public class metodos {
         int[] vector = new int[n];
 
         vector = m.llenarVector(vector);
-        System.out.println("El vector quedo de la siguiente manera");
+        System.out.println("El vector quedo de la siguiente manera: ");
         m.mostrarVector(vector);
 
         Stack<Integer> pila = new Stack<>();
 
         pila = m.llenarPilaConfactorial(pila,vector);
         m.mostrarPila(pila);
-
-
-
     }
 
     public int[] llenarVector(int[] vector) {
@@ -55,7 +52,7 @@ public class metodos {
 
     public int factorial(int numero){
         if (numero < 0){
-            System.out.println("No es posible asignar un factorial, por lo tanto se coloca el numero 1");
+            System.out.println("No es posible asignar un factorial, por lo tanto se coloca el numero 0");
             return 0;
         }
         int factorial = 1;
@@ -69,9 +66,10 @@ public class metodos {
         System.out.println("\nLa pila quedo de la siguiente manera: ");
         System.out.println(pila);
         
-        System.out.println("\nDesapilamos la pila: ");
+        System.out.println("\nDesapilamos la pila con el factorial del vector: ");
 
         int i = 1;
+
         while (!pila.isEmpty()) {
             System.out.print(i++ + " --> ");
             System.out.println(pila.pop());
